@@ -1,10 +1,12 @@
 class Ldev < Formula
   desc "Local development environment manager with Traefik routing"
-  homepage "https://git.hnsn.dev/auhanson/ldev"
-  url "https://git.hnsn.dev/auhanson/ldev.git", tag: "v0.1.0"
+  homepage "https://github.com/berdon/ldev"
+  url "https://github.com/berdon/ldev.git",
+      tag:      "v0.1.0",
+      revision: "72ebdcf09e9fff07dc8abb93589f9912f10f3f88"
   license "MIT"
 
-  head "https://git.hnsn.dev/auhanson/ldev.git", branch: "master"
+  head "https://github.com/berdon/ldev.git", branch: "master"
 
   depends_on "node"
   depends_on "traefik"
@@ -29,6 +31,8 @@ class Ldev < Formula
 
   test do
     assert_match "ldev - local dev environment manager", shell_output("#{bin}/ldev --help")
-    assert_match "ldev_list_things", shell_output("#{Formula["node"].opt_bin}/node -e 'const {TOOLS}=require(\"#{libexec}/src/mcp-server\"); console.log(TOOLS.map((tool) => tool.name).join(\"\\n\"));'")
+    script = "const {TOOLS}=require('#{libexec}/src/mcp-server'); " \
+             "console.log(TOOLS.map((tool) => tool.name).join('\\n'));"
+    assert_match "ldev_list_things", shell_output("#{formula_opt_bin("node")}/node -e #{script.shellescape}")
   end
 end

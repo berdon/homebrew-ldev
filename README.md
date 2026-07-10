@@ -6,7 +6,7 @@ routing, port reservations, REST, CLI, and MCP controls.
 ## Install
 
 ```bash
-brew tap auhanson/ldev https://git.hnsn.dev/auhanson/homebrew-ldev.git
+brew tap berdon/ldev https://github.com/berdon/homebrew-ldev.git
 brew install ldev
 ```
 
