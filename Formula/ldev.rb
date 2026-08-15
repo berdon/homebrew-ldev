@@ -2,8 +2,8 @@ class Ldev < Formula
   desc "Local development environment manager with Traefik routing"
   homepage "https://github.com/berdon/ldev"
   url "https://github.com/berdon/ldev.git",
-      tag:      "v0.1.10",
-      revision: "23e353755744e285af6f5d9f1e8b4fdd8bf89359"
+      tag:      "v0.1.11",
+      revision: "49533ebbf2ed9f7e93b59614eaf949bb16419c80"
   license "MIT"
 
   head "https://github.com/berdon/ldev.git", branch: "master"
