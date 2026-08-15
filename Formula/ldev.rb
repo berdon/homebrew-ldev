@@ -3,7 +3,7 @@ class Ldev < Formula
   homepage "https://github.com/berdon/ldev"
   url "https://github.com/berdon/ldev.git",
       tag:      "v0.1.11",
-      revision: "49533ebbf2ed9f7e93b59614eaf949bb16419c80"
+      revision: "49533ebd76110c08b6bc4ee935b3506ace5b0f00"
   license "MIT"
 
   head "https://github.com/berdon/ldev.git", branch: "master"
